@@ -1,0 +1,10 @@
+Problem: Longest Palindromic Substring (LeetCode #5)
+
+Short Explanation:
+This solution uses the Expand Around Center approach.
+
+The Core Idea: A palindrome mirrors around its center. The code loops through each character in the array and treats it as a potential center, expanding outwards to the left (j--) and right (k++) as long as the characters match.
+
+Two Cases: It calls the helper function expandPalin twice per loop. Once for odd-length palindromes (where the center is a single character) and once for even-length palindromes (where the center is between two characters).
+
+Tracking the Longest: It keeps track of the longest palindrome found using max for the length and l for the starting index. Finally, it uses s.substring to extract and return that portion of the string.
